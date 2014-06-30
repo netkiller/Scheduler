@@ -1,0 +1,143 @@
+[30-Jun-2014 17:56:52 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 26
+[30-Jun-2014 17:57:19 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 26
+[30-Jun-2014 17:57:22 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 28
+[30-Jun-2014 17:58:47 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 31
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP Notice:  Undefined variable: redis in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/Mutex.php:0
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/Mutex.php:16
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP Fatal error:  Call to a member function setnx() on a non-object in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/Mutex.php:0
+[30-Jun-2014 18:00:09 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/Mutex.php:16
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP Notice:  Undefined variable: redis in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/Mutex.php:0
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/Mutex.php:16
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP Fatal error:  Call to a member function setnx() on a non-object in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/Mutex.php:0
+[30-Jun-2014 18:00:12 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/Mutex.php:16
+[30-Jun-2014 18:04:21 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 43
+[30-Jun-2014 18:05:11 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 43
+[30-Jun-2014 18:05:31 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 43
+[30-Jun-2014 18:05:36 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 43
+[30-Jun-2014 18:07:48 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 40
+[30-Jun-2014 18:07:48 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:07:48 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:07:52 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/Mutex.php on line 40
+[30-Jun-2014 18:07:52 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:07:52 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:08:14 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/test.php on line 12
+[30-Jun-2014 18:08:14 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:08:14 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:08:38 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/test.php on line 12
+[30-Jun-2014 18:08:38 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:08:38 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:08:52 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare class Mutex in /www/Scheduler/test.php on line 12
+[30-Jun-2014 18:08:52 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:08:52 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:11:31 Asia/Hong_Kong] PHP Fatal error:  Call to protected method ClusterMutex::create() from context '' in /www/Scheduler/test.php on line 11
+[30-Jun-2014 18:11:31 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:11:31 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:12:40 Asia/Hong_Kong] PHP Fatal error:  Call to protected method ClusterMutex::create() from context '' in /www/Scheduler/test.php on line 12
+[30-Jun-2014 18:12:40 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:12:40 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:12:42 Asia/Hong_Kong] PHP Fatal error:  Call to protected method ClusterMutex::create() from context '' in /www/Scheduler/test.php on line 12
+[30-Jun-2014 18:12:42 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:12:42 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:13:06 Asia/Hong_Kong] PHP Fatal error:  Call to private method ClusterMutex::create() from context '' in /www/Scheduler/test.php on line 12
+[30-Jun-2014 18:13:06 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:13:06 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:13:16 Asia/Hong_Kong] PHP Fatal error:  Cannot access private property Remote::$redis in /www/Scheduler/Mutex.php on line 26
+[30-Jun-2014 18:13:16 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:13:16 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:13:16 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:13:18 Asia/Hong_Kong] PHP Fatal error:  Cannot access private property Remote::$redis in /www/Scheduler/Mutex.php on line 26
+[30-Jun-2014 18:13:18 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:13:18 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:13:18 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:13:31 Asia/Hong_Kong] PHP Fatal error:  Access to undeclared static property: Remote::$redis in /www/Scheduler/Mutex.php on line 26
+[30-Jun-2014 18:13:31 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:13:31 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:13:31 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:13:33 Asia/Hong_Kong] PHP Fatal error:  Access to undeclared static property: Remote::$redis in /www/Scheduler/Mutex.php on line 26
+[30-Jun-2014 18:13:33 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:13:33 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:13:33 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:14:06 Asia/Hong_Kong] PHP Fatal error:  Call to a member function set() on a non-object in /www/Scheduler/Mutex.php on line 26
+[30-Jun-2014 18:14:06 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:14:06 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:14:06 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP Notice:  Undefined property: Remote::$redis in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP Fatal error:  Call to a member function set() on a non-object in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:14:27 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP Notice:  Undefined property: Remote::$redis in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP Fatal error:  Call to a member function set() on a non-object in /www/Scheduler/Mutex.php on line 10
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:14:29 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:16:24 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare static Remote::$redis as non static ClusterMutex::$redis in /www/Scheduler/Mutex.php on line 49
+[30-Jun-2014 18:16:24 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:16:24 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:16:27 Asia/Hong_Kong] PHP Fatal error:  Cannot redeclare static Remote::$redis as non static ClusterMutex::$redis in /www/Scheduler/Mutex.php on line 49
+[30-Jun-2014 18:16:27 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:16:27 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP Notice:  Undefined property: Remote::$redis in /www/Scheduler/Mutex.php on line 18
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP Fatal error:  Call to a member function set() on a non-object in /www/Scheduler/Mutex.php on line 18
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:19:35 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP Notice:  Undefined property: Remote::$redis in /www/Scheduler/Mutex.php on line 18
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP Fatal error:  Call to a member function set() on a non-object in /www/Scheduler/Mutex.php on line 18
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:19:38 Asia/Hong_Kong] PHP   2. Remote->test() /www/Scheduler/test.php:9
+[30-Jun-2014 18:26:51 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method Remote::exists() in /www/Scheduler/Mutex.php on line 37
+[30-Jun-2014 18:26:51 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:26:51 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:26:51 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:29:07 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method Remote::exists() in /www/Scheduler/Mutex.php on line 30
+[30-Jun-2014 18:29:07 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:29:07 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:29:07 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:29:10 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method Remote::exists() in /www/Scheduler/Mutex.php on line 30
+[30-Jun-2014 18:29:10 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:29:10 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:29:10 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:30:05 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method Remote::exists() in /www/Scheduler/Mutex.php on line 30
+[30-Jun-2014 18:30:05 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:30:05 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:30:05 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:30:09 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method Remote::exists() in /www/Scheduler/Mutex.php on line 30
+[30-Jun-2014 18:30:09 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:30:09 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:30:09 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:30:30 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method Remote::exists() in /www/Scheduler/Mutex.php on line 30
+[30-Jun-2014 18:30:30 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:30:30 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:30:30 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:30:51 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method Remote::exists() in /www/Scheduler/Mutex.php on line 30
+[30-Jun-2014 18:30:51 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:30:51 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:30:51 Asia/Hong_Kong] PHP   2. ClusterMutex->create() /www/Scheduler/test.php:12
+[30-Jun-2014 18:31:15 Asia/Hong_Kong] PHP Fatal error:  Call to undefined method ClusterMutex::lock() in /www/Scheduler/test.php on line 13
+[30-Jun-2014 18:31:15 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:31:15 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
+[30-Jun-2014 18:56:28 Asia/Hong_Kong] PHP Parse error:  syntax error, unexpected '}' in /www/Scheduler/Task.php on line 9
+[30-Jun-2014 18:56:28 Asia/Hong_Kong] PHP Stack trace:
+[30-Jun-2014 18:56:28 Asia/Hong_Kong] PHP   1. {main}() /www/Scheduler/test.php:0
