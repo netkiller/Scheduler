@@ -22,9 +22,14 @@ echo $remote->get($mutex_key);
 $lock = new RemoteLock();
 $mutex = new ClusterMutex($lock);
 $task = new Task($mutex);
-$scheculer = new Scheduler();
-$scheculer->run();
 */
+$scheduler = new Scheduler();
+$scheduler->join('*/5 * * * *', '/var/www/test.php');
+$scheduler->join('*/5 * * * *', '/var/www/abc.php', FALSE);
+$scheduler->debug();
+$scheduler->setup();
 
+/*
 $task = new Task(new ClusterMutex(new RemoteLock()));
 $task->run();
+*/
