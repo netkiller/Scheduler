@@ -1,7 +1,15 @@
 <?php
-include_once 'Scheduler.php';
-include_once 'Mutex.php';
-include_once 'Task.php';
+include_once 'Scheduler.class.php';
+include_once 'Logging.class.php';
+include_once 'Lock.class.php';
+include_once 'Mutex.class.php';
+include_once 'Task.class.php';
+
+
+use Scheduler\Timer;
+//use Scheduler\Lock;
+use Scheduler\Mutex;
+use Scheduler\Task;
 
 /*
 $remote = new RemoteLock();
@@ -19,12 +27,15 @@ echo $remote->get($mutex_key);
 */
 
 /*
-$lock = new RemoteLock();
-$mutex = new ClusterMutex($lock);
-$task = new Task($mutex);
-$scheculer = new Scheduler();
-$scheculer->run();
+$lock = new Scheduler\Lock\RemoteLock();
+$mutex = new Scheduler\Mutex\ClusterMutex($lock);
+$task = new Scheduler\Task\Task($mutex);
+$task->run();
 */
 
-$task = new Task(new ClusterMutex(new RemoteLock()));
-$task->run();
+//$scheculer = new Scheduler();
+//$scheculer->run();
+
+
+//$task = new Scheduler\Task\Task(new Scheduler\Mutex\ClusterMutex(new Scheduler\Lock\RemoteLock()));
+//$task->run();

@@ -1,4 +1,4 @@
 Scheduler
 =========
 
-PHP - Scheduler
+PHP - Scheduler Framework
