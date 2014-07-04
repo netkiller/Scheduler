@@ -25,17 +25,19 @@ echo $remote->get($mutex_key);
 $mutex->destroy($mutex_key);
 echo $remote->get($mutex_key);
 */
-
+/*
 $lock = new Scheduler\Lock\RemoteLock();
 $mutex = new Scheduler\Mutex\ClusterMutex($lock);
 $task = new Scheduler\Task\Task($mutex);
 $task->run();
+*/
 
 $scheduler = new Scheduler();
 $scheduler->join('*/5 * * * *', '/var/www/test.php');
 $scheduler->join('*/5 * * * *', '/var/www/abc.php', FALSE);
 $scheduler->debug();
 $scheduler->setup();
+//$scheduler->setup($host, $port, $user, $password);
 
 //$task = new Scheduler\Task\Task(new Scheduler\Mutex\ClusterMutex(new Scheduler\Lock\RemoteLock()));
 //$task->run();
