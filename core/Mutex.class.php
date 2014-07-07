@@ -9,8 +9,9 @@ class ClusterMutex{
 
     final public function create($mutex){
         if(!$this->lock->exists($mutex)){
-            $this->lock->set($mutex, FALSE);
+            return $this->lock->set($mutex, FALSE);
         }
+        return FALSE;
     }
 
     final public function lock($mutex){

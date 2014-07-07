@@ -21,6 +21,7 @@ interface Lock {
 }
 
 class RemoteLock implements Lock{
+    /* Distributed lock with Redis */
     public $redis;
     public function __construct() {
         $this->redis = new \Redis();
@@ -57,5 +58,26 @@ class LocalLock  implements Lock{
     }
     public function delete($key){
 
+    }
+}
+
+class DatabaseLock implements Lock{
+    public $redis;
+    public function __construct() {
+        $this->redis = new \Redis();
+        $this->redis->pconnect('192.168.2.1', 6379);
+        return($this->redis);
+    }
+    public function set($key, $val){
+        return $this->redis->set($key, $val);
+    }
+    public function get($key){
+        return $this->redis->get($key);
+    }
+    public function exists($key){
+        return $this->redis->exists($key);
+    }
+    public function delete($key){
+        return $this->redis->delete($key);
     }
 }
