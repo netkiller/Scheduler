@@ -14,6 +14,7 @@ namespace Scheduler\Lock;
  * @author neo
  */
 interface Lock {
+    public function __construct($expire = 0);
     public function set($key, $val);
     public function get($key);
     public function exists($key);
@@ -22,14 +23,21 @@ interface Lock {
 
 class RemoteLock implements Lock{
     /* Distributed lock with Redis */
-    public $redis;
-    public function __construct() {
+    private $redis;
+    private $expire;
+    public function __construct($expire = 0) {
+        $this->expire = $expire;
         $this->redis = new \Redis();
         $this->redis->pconnect('192.168.2.1', 6379);
         return($this->redis);
     }
     public function set($key, $val){
-        return $this->redis->set($key, $val);
+        $status = $this->redis->set($key, $val);
+        if($this->expire){
+            $this->redis->expire($key, $this->expire);
+        }
+        return $status;
+
     }
     public function get($key){
         return $this->redis->get($key);
@@ -44,7 +52,7 @@ class RemoteLock implements Lock{
 
 class LocalLock  implements Lock{
     public $redis;
-    public function __construct() {
+    public function __construct($expire = 0) {
 
     }
     public function set($key, $val){
@@ -63,7 +71,7 @@ class LocalLock  implements Lock{
 
 class DatabaseLock implements Lock{
     public $redis;
-    public function __construct() {
+    public function __construct($expire = 0) {
         $this->redis = new \Redis();
         $this->redis->pconnect('192.168.2.1', 6379);
         return($this->redis);

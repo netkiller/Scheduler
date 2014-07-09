@@ -15,11 +15,11 @@ class ClusterMutex{
     }
 
     final public function lock($mutex){
-        if($this->lock->exists($mutex)){
+        //if($this->lock->exists($mutex)){
             if(!$this->lock->get($mutex)){
                 return $this->lock->set($mutex, TRUE);
             }
-        }
+        //}
         return FALSE;
     }
     final public function unlock($mutex){

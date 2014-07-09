@@ -1,8 +1,9 @@
 <?php
-namespace Task;
 
 class Test {
     public function __construct(){
+        printf("task starting %s \n", getenv('HOSTNAME'));
+        //print_r($_SERVER);
 
     }
     public function run(){

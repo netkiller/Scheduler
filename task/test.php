@@ -7,15 +7,19 @@ include_once 'core/Logging.class.php';
 include_once 'core/Lock.class.php';
 include_once 'core/Mutex.class.php';
 include_once 'core/Task.class.php';
-include_once 'task/test.class.php';
+include_once 'libexec/test.class.php';
+
+//namespace Task;
 
 try {
 
     $lock = new Scheduler\Lock\RemoteLock();
     $mutex = new Scheduler\Mutex\ClusterMutex($lock);
-    $test = new \Task\Test();
-    $task = new Scheduler\Task($mutex, $test);
-    //$task->resetlock();
+    $test = new Test();
+
+    $task = new Scheduler\TaskMutex($mutex, $test);
+    $task->run();
+    //$task->loop(5);
 
 } catch (Exception $e) {
     echo $e->getMessage();
