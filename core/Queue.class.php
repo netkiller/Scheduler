@@ -31,7 +31,7 @@ class Queue {
     public function pop($key){
         return $this->redis->lpop($key);
     }
-    public function current($key){
+    public function first($key){
         return $this->redis->lget($key, 0);
     }
     public function search($key, $val){
@@ -41,6 +41,12 @@ class Queue {
             }
         }
         return FALSE;
+    }
+    public function exists($key){
+        return $this->redis->exists($key);
+    }
+    public function delete($key){
+        return $this->redis->delete($key);
     }
 }
 /*
@@ -57,7 +63,3 @@ $queue->search($key, 'aaa');
 
 $queue->pop($key);
 */
-
-//echo mt_rand(1, 9);
-//echo rand(1, 9);
-sleep(0);
