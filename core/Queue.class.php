@@ -48,11 +48,21 @@ class Queue {
     public function delete($key){
         return $this->redis->delete($key);
     }
+    public function count($key, $val = 0){
+        if(!$this->redis->exists($key)){
+            $this->redis->set($key, $val);
+        }
+        return $this->redis->incr($key);
+    }
+    public function size($key){
+        return $this->redis->lsize($key);
+    }
 }
-/*
-$queue = new Queue();
-$key = 'crontab:queue';
 
+//$queue = new Queue();
+
+//$key = 'schedule:queue';
+/*
 echo $queue->current($key);
 
 $queue->push($key, 'aaa');
@@ -63,3 +73,4 @@ $queue->search($key, 'aaa');
 
 $queue->pop($key);
 */
+//echo $queue->count($key);

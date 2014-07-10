@@ -88,9 +88,12 @@ class TaskQueue extends Task {
     private $queue  = null;
     private $task   = null;
 
+    const prefix = "schedule:queue";
+
     public function __construct(\Scheduler\Queue $queue, $task) {
         parent::__construct();
-        $this->name     = "schedule:queue:".get_class($task);
+        $this->name     = self::prefix.':'.get_class($task);
+        $this->class    = get_class($task);
         //$this->node     = getenv('HOSTNAME');
         $this->node     = getmypid();
         $this->queue    = $queue;
@@ -120,6 +123,7 @@ class TaskQueue extends Task {
         }
     }
     public function loop($seconds = 5){
+        /* $seconds >= runtime */
         while(TRUE){
             if($this->queue->push($this->name, $this->node)){
                 parent::$logging->info(sprintf("queue push %s:%s", $this->name, $this->node));
@@ -132,14 +136,28 @@ class TaskQueue extends Task {
                 $this->task->run();
 
                 if($pop = $this->queue->pop($this->name)){
-                    parent::$logging->info(sprintf("queue pop %s", $pop));
+                    parent::$logging->info(sprintf("queue pop %s:%s", $this->name, $pop));
                 }
             }else{
-                parent::$logging->info(sprintf("waiting for pop queue %s:%s", $this->name, $first));
-                sleep(mt_rand(0, $seconds));
+                parent::$logging->info(sprintf("queue waiting for pop  %s:%s - %s", $this->name, $this->node, $first));
+                sleep(mt_rand(1, $seconds));
+
+                $ckey = self::prefix.':count:'.$this->class.'-'.$first;
+                $queue_count    = $this->queue->count($ckey);
+                $max_count      = $this->queue->size($this->name) * $seconds;
+                if( $queue_count > $max_count ){
+                    if($pop = $this->queue->pop($this->name)){
+                        parent::$logging->info(sprintf("queue force pop %s:%s (%s:%s)", $this->name, $pop, $queue_count, $max_count));
+                        $this->queue->delete($ckey);
+                    }
+                }
+                #printf("%d=", $this->queue->count($ckey)) ;
+
                 continue;
             }
+
             sleep($seconds);
+            parent::$logging->info(sprintf("===== %s:%s =====", $this->name, $this->node));
         }
     }
 }

@@ -7,7 +7,7 @@ include_once 'core/Logging.class.php';
 include_once 'core/Lock.class.php';
 include_once 'core/Mutex.class.php';
 include_once 'core/Task.class.php';
-include_once 'libexec/test.class.php';
+include_once 'job/test.class.php';
 
 //namespace Task;
 
@@ -15,7 +15,7 @@ try {
 
     $lock = new Scheduler\Lock\RemoteLock();
     $mutex = new Scheduler\Mutex\ClusterMutex($lock);
-    $test = new Test();
+    $test = new Job\Test();
 
     $task = new Scheduler\TaskMutex($mutex, $test);
     $task->run();
