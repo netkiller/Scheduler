@@ -1,5 +1,7 @@
 <?php
-class Scheduler {
+namespace Scheduler;
+
+class Crontab {
     public $cron = array();
     public function __construct() {
         //print('aaa');
@@ -19,7 +21,7 @@ class Scheduler {
     public function monthly($param) {
 
     }
-	
+
     public function join($schedule, $cmd, $status = TRUE){
         $this->cron[] = array(($status?'':'#').$schedule => $cmd);
     }
@@ -32,6 +34,16 @@ class Scheduler {
         }
     }
     public function setup(){
-        
-    }	
+        $filename = "/tmp/.crontab";
+        $file = fopen($filename,"w+");
+        ftruncate($file,0);
+        rewind($file);
+        foreach($this->cron as $line){
+            list($sch, $cmd) = each($line);
+            fputs($file, sprintf("%s\t%s\n", $sch, $cmd));
+        }
+        fclose($file);
+        system(sprintf("cat %s | crontab", $filename));
+        #system("crontab -l");
+    }
 }

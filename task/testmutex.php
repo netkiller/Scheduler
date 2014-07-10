@@ -1,15 +1,13 @@
 <?php
 //include_once 'autoload.php';
+chdir(dirname(__DIR__));
 
 include_once 'core/Common.class.php';
-include_once 'core/Scheduler.class.php';
 include_once 'core/Logging.class.php';
 include_once 'core/Lock.class.php';
 include_once 'core/Mutex.class.php';
 include_once 'core/Task.class.php';
 include_once 'job/test.class.php';
-
-//namespace Task;
 
 try {
 
