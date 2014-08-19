@@ -11,7 +11,7 @@ include_once 'job/test.class.php';
 
 try {
 
-    $lock = new Scheduler\Lock\RemoteLock();
+    $lock = new Scheduler\Lock\RemoteLock($expire=300);
     $mutex = new Scheduler\Mutex\ClusterMutex($lock);
     $test = new Job\Test();
 
